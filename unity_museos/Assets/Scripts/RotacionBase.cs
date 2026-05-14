@@ -4,8 +4,14 @@ public class RotacionBase : MonoBehaviour
 {
     public float velocidad = 15f;
 
+    [HideInInspector]
+    public bool detenerRotacion = false;
+
     void Update()
     {
-        transform.Rotate(0, velocidad * Time.deltaTime, 0);
+        if (!detenerRotacion)
+        {
+            transform.Rotate(0, velocidad * Time.deltaTime, 0);
+        }
     }
 }
