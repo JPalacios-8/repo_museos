@@ -4,19 +4,39 @@ public class HoverReloj : MonoBehaviour
 {
     public ExplosionReloj explosion;
 
+    public MoverCamara moverCamara;
+
+    public RotacionBase rotacionBase;
+
+    public BlurController blurController;
+
+    public GameObject panelHover;
+
     void OnMouseEnter()
     {
-        Debug.Log("Hover sobre reloj");
+        panelHover.SetActive(true);
     }
 
     void OnMouseExit()
     {
-        Debug.Log("Mouse salió del reloj");
+        panelHover.SetActive(false);
     }
 
     void OnMouseDown()
     {
-        Debug.Log("Click en reloj");
+        panelHover.SetActive(false);
+
+        rotacionBase.ResetearRotacion();
+
+        moverCamara.ActivarMovimiento();
+
+        blurController.ActivarBlur();
+
+        Invoke("ActivarExplosion", 1.2f);
+    }
+
+    void ActivarExplosion()
+    {
         explosion.ActivarExplosion();
     }
 }

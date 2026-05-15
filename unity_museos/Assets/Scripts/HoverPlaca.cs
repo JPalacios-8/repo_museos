@@ -6,11 +6,11 @@ public class HoverPlaca : MonoBehaviour
 
     void OnMouseEnter()
     {
-        rotacionBase.detenerRotacion = true;
+        rotacionBase.PausarRotacion();
     }
 
     void OnMouseExit()
     {
-        rotacionBase.detenerRotacion = false;
+        rotacionBase.ReanudarRotacion();
     }
 }
