@@ -10,6 +10,8 @@ public class InteraccionPlaca : MonoBehaviour
 
     public Transform targetLectura;
 
+    public GameObject botonCerrar;
+
     private bool enModoLectura = false;
 
     void OnMouseDown()
@@ -28,6 +30,7 @@ public class InteraccionPlaca : MonoBehaviour
     {
         rotacionBase.enModoLectura = true;
         rotacionBase.PausarRotacion();
+        botonCerrar.SetActive(true);
 
 
         if (esPlacaTrasera)
@@ -53,6 +56,19 @@ public class InteraccionPlaca : MonoBehaviour
     {
         moverCamara.ResetCamara();
         rotacionBase.enModoLectura = false;
+
+        rotacionBase.ReanudarRotacion();
+
+        enModoLectura = false;
+    }
+
+    public void ForzarSalida()
+    {
+        moverCamara.ResetCamara();
+
+        rotacionBase.enModoLectura = false;
+
+        botonCerrar.SetActive(false);
 
         rotacionBase.ReanudarRotacion();
 

@@ -16,6 +16,8 @@ public class HoverReloj : MonoBehaviour
 
     public Transform camaraTargetExplosion;
 
+    public GameObject botonCerrar;
+
     void OnMouseEnter()
     {
         if (!explosion.estaExplotado)
@@ -51,11 +53,13 @@ public class HoverReloj : MonoBehaviour
 
             blurController.ActivarBlur();
 
+            botonCerrar.SetActive(true);
+
             Invoke("ActivarExplosion", 1.2f);
         }
         else
         {
-            ResetearExperiencia();
+            ResetearExperienciaPublico();
         }
     }
 
@@ -64,8 +68,10 @@ public class HoverReloj : MonoBehaviour
         explosion.ActivarExplosion();
     }
 
-    void ResetearExperiencia()
+    public void ResetearExperienciaPublico()
     {
+        botonCerrar.SetActive(false);
+
         explosion.ResetExplosion();
 
         moverCamara.ResetCamara();
