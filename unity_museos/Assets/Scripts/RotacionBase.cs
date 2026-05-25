@@ -6,7 +6,13 @@ public class RotacionBase : MonoBehaviour
 
     private Quaternion rotacionInicial;
 
+    public Quaternion RotacionInicial
+    {
+        get { return rotacionInicial; }
+    }
+
     private bool rotando = true;
+    public bool enModoLectura = false;
 
     private bool regresando = false;
 
@@ -52,6 +58,12 @@ public class RotacionBase : MonoBehaviour
     }
     public void PausarRotacion()
     {
+        rotando = false;
+    }
+    public void RotarA(Quaternion rotacionObjetivo)
+    {
+        transform.rotation = rotacionObjetivo;
+
         rotando = false;
     }
 }

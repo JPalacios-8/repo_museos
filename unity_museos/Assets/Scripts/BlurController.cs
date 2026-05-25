@@ -19,4 +19,8 @@ public class BlurController : MonoBehaviour
     {
         depthOfField.active = true;
     }
+    public void DesactivarBlur()
+    {
+        depthOfField.active = false;
+    }
 }

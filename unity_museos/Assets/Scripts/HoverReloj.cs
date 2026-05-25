@@ -12,31 +12,66 @@ public class HoverReloj : MonoBehaviour
 
     public GameObject panelHover;
 
+    public GameObject panelVolver;
+
+    public Transform camaraTargetExplosion;
+
     void OnMouseEnter()
     {
-        panelHover.SetActive(true);
+        if (!explosion.estaExplotado)
+        {
+            panelHover.SetActive(true);
+        }
+        else
+        {
+            panelVolver.SetActive(true);
+        }
     }
 
     void OnMouseExit()
     {
         panelHover.SetActive(false);
+
+        panelVolver.SetActive(false);
     }
 
     void OnMouseDown()
     {
-        panelHover.SetActive(false);
+        if (!explosion.estaExplotado)
+        {
+            panelHover.SetActive(false);
 
-        rotacionBase.ResetearRotacion();
+            rotacionBase.ResetearRotacion();
 
-        moverCamara.ActivarMovimiento();
+            moverCamara.ResetCamara();
 
-        blurController.ActivarBlur();
+            moverCamara.objetivo = camaraTargetExplosion;
 
-        Invoke("ActivarExplosion", 1.2f);
+            moverCamara.ActivarMovimiento();
+
+            blurController.ActivarBlur();
+
+            Invoke("ActivarExplosion", 1.2f);
+        }
+        else
+        {
+            ResetearExperiencia();
+        }
     }
 
     void ActivarExplosion()
     {
         explosion.ActivarExplosion();
+    }
+
+    void ResetearExperiencia()
+    {
+        explosion.ResetExplosion();
+
+        moverCamara.ResetCamara();
+
+        blurController.DesactivarBlur();
+
+        rotacionBase.ReanudarRotacion();
     }
 }
