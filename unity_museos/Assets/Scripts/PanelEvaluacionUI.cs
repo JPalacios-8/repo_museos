@@ -16,6 +16,6 @@ public class PanelEvaluacionUI : MonoBehaviour
 
     public void AbrirQuiz()
     {
-        Application.OpenURL("PEGA_AQUI_TU_LINK");
+        Application.OpenURL("https://mecanicadeltiempo.milaulas.com/course/view.php?id=2");
     }
 }
