@@ -535,7 +535,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 330859118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1914922926}
+        m_TargetAssemblyTypeName: PanelEvaluacionUI, Assembly-CSharp
+        m_MethodName: AbrirQuiz
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &330859118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,7 +3606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ed5495e2615b84885dfb0ecc6d26e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 15
+  velocidad: 30
   enModoLectura: 0
 --- !u!1001 &1726666154
 PrefabInstance:
@@ -3614,31 +3626,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.612
+      value: 0.86755264
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.83
+      value: 7.576
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.428
+      value: -3.2735693
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.1781039
+      value: 0.2353855
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.05779712
+      value: -0.076385796
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9343465
+      value: 0.9215845
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.30320817
+      value: 0.2990666
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3646,7 +3658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 158.416
+      value: 151.344
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4f4226c2d095404cb1686237cae7000, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
